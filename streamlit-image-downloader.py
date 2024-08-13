@@ -32,7 +32,7 @@ def create_zip(images, extract_dir):
             folder_name = os.path.dirname(relative_path)
             if folder_name == '':
                 folder_name = 'root'
-            folder_counters[folder_name] += 1
+            folder_counters[folder_name] += 100
             new_name = f"{folder_name}_{folder_counters[folder_name]}{os.path.splitext(img)[1]}"
             zipf.write(img, new_name)
     return zip_buffer
